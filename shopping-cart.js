@@ -1,21 +1,17 @@
 let total = 0;
 let discount = 0;
 let grandTotal = 0;
-let itemCount = 1; 
 
 function itemClickedButton(target) {
    const cartItemsList = document.getElementById('cart-items-list');
    const itemNames = target.querySelector('.item-name').innerText;
 
-   const ol = document.createElement('ol');
    const li = document.createElement('li');
-   li.innerText = `${itemCount}. ${itemNames}`;
+   li.innerText = itemNames;
    li.style.textAlign = 'left';
    li.style.margin = '0';
    li.style.padding = '4px 0px 4px 5px';
-   ol.appendChild(li);
-   cartItemsList.appendChild(ol); 
-   itemCount++;
+   cartItemsList.appendChild(li); 
 
    const price = target.querySelector('.price').innerText;
    total = parseFloat(total) + parseFloat(price);
@@ -72,7 +68,6 @@ document.getElementById('go-home-btn').addEventListener('click', function() {
    total = 0;
    discount = 0;
    grandTotal = 0;
-   itemCount = 1;
 
    document.getElementById('total-price').innerText = total.toFixed(2);
    document.getElementById('discount-price').innerText = discount.toFixed(2);

@@ -10,11 +10,11 @@
 </head>
 <body>
    <!-- Header Start --> 
-   <header class="bg-amber-50 lg:h-[90vh] flex">
+   <header class="bg-amber-50 lg:h-[100vh] flex">
       <section class="container mx-auto flex flex-col-reverse justify-center items-center gap-7  p-5 md:flex-row">
          <div class="flex-1 py-5 text-center">
             <p class="text-lg lg:text-[32px] font-medium mb-8 md:mb-12">---SALE FEVER---</p>
-            <h1 class="text-3xl lg:text-6xl font-bold">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20% off</span></h1>
+            <h1 class="text-3xl lg:text-5xl xl:text-6xl font-bold">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20% off</span></h1>
             <p class="text-lg lg:text-2xl font-medium mt-12 md:mt-20">Use Promo Code<span><button class="btn btn-secondary ml-4 px-8 text-2xl font-semibold text-white">SELL200</button></span></p>
          </div>
          <div class="flex-1 mx-auto">
@@ -24,6 +24,7 @@
    </header>
    <!-- Main Start -->
    <main class="md:container mx-auto md:w-full flex flex-col-reverse md:flex-col lg:flex-row gap-6 mt-16 lg:mt-28 mb-52">
+      <!-- Card Section -->
       <section class="lg:w-3/4 p-5">
          <!-- 1st Collection -->
          <div class="w-full">
@@ -80,9 +81,10 @@
                     <p class="text-black opacity-50 text-xl"><span class="price" id="home-cooker-price">49.00</span> TK</p>
                   </div>
                </div>
-               <!-- End -->
             </div>   
          </div>
+         <!-- 1st Collection End -->
+
          <!-- 2nd Collection -->
          <div class="mt-14">
             <h1 class="text-[40px] font-semibold mb-6 text-center lg:text-left">Sportswear</h1>
@@ -138,9 +140,10 @@
                     <p class="text-black opacity-50 text-xl"><span class="price">159.00</span> TK</p>
                   </div>
                </div>
-               <!-- End -->
             </div>   
          </div>
+         <!-- 2nd Collection End -->
+
          <!-- 3rd Collection -->
          <div class="mt-14">
             <h1 class="text-[40px] font-semibold mb-6 text-center 
@@ -197,10 +200,12 @@
                     <p class="text-black opacity-50 text-xl"><span class="price">339.00</span> TK</p>
                   </div>
                </div>
-               <!-- End -->
             </div>   
          </div>
+         <!-- 3rd Collection End -->
       </section>
+      <!-- Card Section End -->
+
       <!-- Cart Section -->
       <section class="w-full lg:w-1/4 lg:mt-24 px-5 mb-16">
          <div class="bg-white p-5 shadow-xl">
@@ -208,9 +213,9 @@
             <p><input id="coupon-field" class="border rounded-l-lg py-4 px-6 w-2/3 text-xl" type="text" value="" placeholder="Coupon Code" disabled><button id="apply-btn" class="border rounded-r-lg py-4 bg-gray-400 text-white font-semibold w-1/3 text-xl" type="button" disabled>Apply</button></p>
          </div>
          <div class="shadow-lg bg-white p-5 mt-10 rounded-lg">
-            <div class="text-2xl font-medium" id="cart-items-list">
+            <ol class="list-decimal pl-6 text-2xl font-medium" id="cart-items-list">
 
-            </div>
+            </ol>
             <hr class="my-5">
             <p class="text-2xl font-medium">Total Price: <span id="total-price" class="text-gray-400">00</span></p>
             <p class="text-2xl font-medium py-2">Discount: <span id="discount-price" class="text-gray-400">00</span></p>
@@ -225,7 +230,7 @@
                      <h3 class="font-bold text-3xl md:text-5xl mt-5">Congratulations</h3>
                      <p class="py-4 pt-5">Your Purchase the product</p>
                      <div class="modal-action flex justify-center">
-                        <button class="btn btn-secondary" id="go-home-btn">Go Home</button>
+                        <button class="btn btn-secondary text-white" id="go-home-btn">Go Home</button>
                      </div>
                   </form>
                </dialog>
@@ -235,6 +240,6 @@
       </section>
    </main>
    
-<script src="shop-cart.js"></script>
+<script src="shopping-cart.js"></script>
 </body>
 </html>
