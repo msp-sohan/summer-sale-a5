@@ -48,9 +48,9 @@ function itemClickedButton(target) {
    }
 }
 
-const applyBtn = document.getElementById('apply-btn');
-applyBtn.addEventListener('click', function(){
-   const couponCode = document.getElementById('coupon-field').value;
+document.getElementById('apply-btn').addEventListener('click', function(){
+   const couponField = document.getElementById('coupon-field');
+   const couponCode = couponField.value;
 
    if (couponCode === 'SELL200') {
       discount = total * 0.2;
@@ -59,9 +59,11 @@ applyBtn.addEventListener('click', function(){
 
       grandTotal = total - discount;
       document.getElementById('price-total').innerText = grandTotal.toFixed(2) + " TK";
+      couponField.value = '';
    } else {
       alert("Invalid coupon code. Please enter a valid coupon code.");
    }
+   
 });
 
 document.getElementById('go-home-btn').addEventListener('click', function() {
