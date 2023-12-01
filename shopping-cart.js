@@ -44,6 +44,7 @@ function itemClickedButton(target) {
    }
 }
 
+// Apply Button Event and Condition
 document.getElementById('apply-btn').addEventListener('click', function(){
    const couponField = document.getElementById('coupon-field');
    const couponCode = couponField.value;
@@ -57,11 +58,12 @@ document.getElementById('apply-btn').addEventListener('click', function(){
       document.getElementById('price-total').innerText = grandTotal.toFixed(2) + " TK";
       couponField.value = '';
    } else {
-      alert("Invalid coupon code. Please enter a valid coupon code.");
+      alert("Invalid Coupon Code. Please enter a valid Coupon Code.");
    }
    
 });
 
+// Go Home Button Event For Resetting Everything
 document.getElementById('go-home-btn').addEventListener('click', function() {
    const cartItemsList = document.getElementById('cart-items-list');
    cartItemsList.innerHTML = '';
