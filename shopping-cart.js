@@ -11,7 +11,7 @@ function itemClickedButton(target) {
    li.style.textAlign = 'left';
    li.style.margin = '0';
    li.style.padding = '4px 0px 4px 5px';
-   cartItemsList.appendChild(li); 
+   cartItemsList.appendChild(li);
 
    const price = target.querySelector('.price').innerText;
    total = parseFloat(total) + parseFloat(price);
@@ -21,16 +21,16 @@ function itemClickedButton(target) {
    const couponField = document.getElementById('coupon-field');
    const makePurchase = document.getElementById('make-purchase');
 
-   if (total >= 200){
-      applyBtn.removeAttribute('disabled'); 
+   if (total >= 200) {
+      applyBtn.removeAttribute('disabled');
       applyBtn.classList.remove('bg-gray-400');
       applyBtn.classList.add('bg-pink-500');
-      couponField.removeAttribute('disabled'); 
+      couponField.removeAttribute('disabled');
    } else {
-      applyBtn.setAttribute('disabled', true); 
+      applyBtn.setAttribute('disabled', true);
       applyBtn.classList.remove('bg-pink-500');
       applyBtn.classList.add('bg-gray-400');
-      couponField.setAttribute('disabled', true); 
+      couponField.setAttribute('disabled', true);
    }
 
    if (total > 0) {
@@ -45,7 +45,7 @@ function itemClickedButton(target) {
 }
 
 // Apply Button Event and Condition
-document.getElementById('apply-btn').addEventListener('click', function(){
+document.getElementById('apply-btn').addEventListener('click', function () {
    const couponField = document.getElementById('coupon-field');
    const couponCode = couponField.value;
 
@@ -60,11 +60,11 @@ document.getElementById('apply-btn').addEventListener('click', function(){
    } else {
       alert("Invalid Coupon Code. Please enter a valid Coupon Code.");
    }
-   
+
 });
 
 // Go Home Button Event For Resetting Everything
-document.getElementById('go-home-btn').addEventListener('click', function() {
+document.getElementById('go-home-btn').addEventListener('click', function () {
    const cartItemsList = document.getElementById('cart-items-list');
    cartItemsList.innerHTML = '';
    total = 0;
@@ -89,3 +89,18 @@ document.getElementById('go-home-btn').addEventListener('click', function() {
    makePurchase.classList.remove('bg-pink-500');
    makePurchase.classList.add('bg-gray-400');
 });
+
+function clickToCopy() {
+   var tempInput = document.createElement("input");
+
+   tempInput.value = document.getElementById("promoCode").innerText;
+
+   document.body.appendChild(tempInput);
+
+   tempInput.select();
+   tempInput.setSelectionRange(0, 99999);
+
+   document.body.removeChild(tempInput);
+
+   alert("Copied the text: " + tempInput.value);
+}
