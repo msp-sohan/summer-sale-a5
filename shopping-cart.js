@@ -100,6 +100,8 @@ function clickToCopy() {
    tempInput.select();
    tempInput.setSelectionRange(0, 99999);
 
+   document.execCommand("copy");
+
    document.body.removeChild(tempInput);
 
    alert("Copied the text: " + tempInput.value);
